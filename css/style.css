@@ -11,12 +11,7 @@ font-family: 'Mitr', sans-serif;
 /*.background{
     background-image: url("../assets/image/fondotienda.png");
 }*/
-main{
-    width: 100%;
-    height: 100%;
-    font-family: 'Mitr', sans-serif;
-    letter-spacing: 0.02;
-}
+
 .titulo{
     display: flex;
     height: 80px;
@@ -86,8 +81,8 @@ main{
     color: whitesmoke;
     padding: 20px 10px;
 }
-/* header */
-header {
+
+/* header {
     height: 100px;
     display: flex;
 }
@@ -131,7 +126,7 @@ header div div a{
     width: 100%;
     display: block;
 } */
-
+/*
 .navBar{
     display: flex;
     justify-content: center;
@@ -154,30 +149,131 @@ header div div a{
     text-decoration: none;
     font-family: 'Mitr', sans-serif;
     color: whitesmoke;
+} */
+header{
+    /* height: auto; */
+    width: 100%;
+    background: #8A8F82;
+    position: fixed;
+    z-index: 2;
+}
+.barra{
+    width: 100%;
+}
+.centrado{
+    justify-content: space-around;
+}
+.logo img {
+    width: 110px;
+    height: auto;
+    transition: all 0.2;
 }
 
+
+/* @media (max-width:768px) {
+    header div nav{
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #DC9D3E;
+        width: 250px;
+        height: 100vh;
+        padding: 40px;
+    }
+    nav ul{
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    nav ul li{
+        margin-top: 30px;
+        margin-left: 0;
+    }
+    nav ul li a{
+        color: #DC9D3E;
+    }
+} */
+
+@media (max-width:768px) {
+    .fondoPrincipal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .texto{
+        width: 80%;
+        margin-right: 0px;
+        padding: 0px;
+        margin-top: -20px;
+        }
+    .texto p{
+        text-align: center;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+    .imagen{
+        margin-left: 10px;
+    }
+}
+@media (max-width:320px) {
+    .fondoPrincipal{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .texto{
+        font-size: 12px;
+        border: solid 2px black;
+        width: 100px;
+        margin: 0;
+        padding: 0;
+    }
+    .texto p{
+        width: 50px;
+        margin-right: 0px;
+        padding-right: 0px;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        align-items: center;
+    }
+    .contenedor{
+        gap: 0;
+        margin: 0;
+        justify-items: center;
+        width: 80%;
+    }
+    .imagen {
+        margin-top: 5px;
+    }
+}
 /* fondos */
 .fondoPrincipal {
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     background-image: url("../assets/image/fondo1.png");
+    background-attachment: fixed;
     width: 100%;
-    height: 647px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    font-family: 'Mitr', sans-serif;
+    letter-spacing: 0.02;
+    padding: 155px 0px;
 }
-.fondoPrincipal div p{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    width: 500px;
-    height: 300px;
-    overflow: hidden;
-    margin: 320px 10px 200px 400px;
+.texto{
+    width: 23%;
+    margin-right: 20px;
+    margin-top: 200px;
 }
 .fondoContacto {
     background-image: url("../assets/image/fondoContacto.png");
+    background-attachment: fixed;
     width: 100%;
     height: 700px;
     background-repeat: no-repeat;
@@ -188,6 +284,7 @@ header div div a{
     display: flex;
     flex-direction: column;
     background-image: url("../assets/image/fondoSobremi.png");
+    background-attachment: fixed;
     width: 100%;
     height: 1300px;
     background-repeat: no-repeat;
@@ -196,6 +293,7 @@ header div div a{
 }
 .fondoTienda {
     background-image: url("../assets/image/fondotienda.png");
+    background-attachment: fixed;
     width: 100%;
     background-repeat: no-repeat;
     background-position: center;
@@ -203,21 +301,25 @@ header div div a{
 }
 .fondoGaleria {
     background-image: url("../assets/image/fondoGaleria.png");
+    background-attachment: fixed;
     width: 100%;
-    height: 1500px;
+    /* height: 1500px; */
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    padding-top: 30px;
+}
+@media (max-width:320px) {
+    .galeria {
+        width: 80%;
+    }
 }
 /* index */
 .banner{
     display: flex;
     flex-direction: column;
-    height: 647px;
-    width: 50%;
-    align-items: flex-start;
+    /* width: 50%; */
     justify-content: flex-start;
-    margin-top: 40px;
 }
 .banner h1{
     font-family: 'Cookie', cursive;
@@ -227,6 +329,7 @@ header div div a{
     align-items: flex-start;
     justify-content: center;
     margin: 5px 10px;
+    padding: 0;
 }
 .banner h2{
     font-family: 'Cookie', cursive;
@@ -235,18 +338,19 @@ header div div a{
     color: #DC9D3E;
     align-items: flex-start;
     margin: 5px 10px;
+    padding: 0;
 }
 /* footer */
 footer{
     width: 100%;
-    height: 180px;
+    height: auto;
     display: flex;
     flex-direction: row;
     background-color: #8A8F82;
 }
 .imagen{
     display: flex;
-    width: 10%;
+    /* width: 10%; */
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
@@ -259,7 +363,7 @@ footer{
 }
 .imagen figure figcaption{
     padding: 0 1rem;
-    font-size: 20px;
+    font-size: 15px;
     font-weight:100;
     text-align: center;
     margin-bottom: 10px;
@@ -270,17 +374,19 @@ align-items: center;
 }
 .imagen div p{
     display: flex;
+    text-align: center;
     font-size: 12px;
     color: whitesmoke;
     width: 150px;
+    border: solid #8A8F82;
+
 }
 .contenedor{
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 100%;
     align-items: center;
     gap: 20px;
-    margin-left: 100px;
 
 }
 .tituloSeccion{
@@ -290,9 +396,10 @@ align-items: center;
 }
 .copy{
     font-size: small;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: flex-end; */
+    text-align: center;
     color: whitesmoke;
 }
 .redes{
@@ -454,16 +561,16 @@ align-items: center;
 .galeria{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-    width: 100%;
+    /* width: 100%; */
     margin: auto;
-    gap: 30px;
+    gap: 40px;
     padding: 15px;
     overflow: hidden;
 }
 .galeria img{
     width: 100%;
     vertical-align: top;
-    height: 410px;
+    height: 310px;
     object-fit: cover;
     transition: transform 1.5s;
 }
