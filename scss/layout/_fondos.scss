@@ -1,0 +1,56 @@
+.fondoPrincipal{
+    @include flex (row,space-between,none);
+    flex-wrap: wrap;
+    background-image: url("../assets/image/fondo1.png");
+    background-attachment: fixed;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    letter-spacing: 0.02;
+    padding: 155px 0px;
+    font-family: $typo-sec;
+}
+.texto{
+    width: 23%;
+    margin-right: 20px;
+    margin-top: 200px;
+}
+.fondoContacto {
+    background-image: url("../assets/image/fondoContacto.png");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 120px;
+    height: 85vh;
+}
+.fondoSobreMi {
+    @include flex (column, none, none);
+    background-image: url("../assets/image/fondoSobremi.png");
+    background-attachment: fixed;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 120px;
+}
+.fondoTienda {
+    background-image: url("../assets/image/fondotienda.png");
+    background-attachment: fixed;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 120px;
+}
+.fondoGaleria {
+    background-image: url("../assets/image/fondoGaleria.png");
+    background-attachment: fixed;
+    width: 100%;
+    /* height: 1500px; */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding-top: 30px;
+}

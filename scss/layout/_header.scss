@@ -1,0 +1,18 @@
+header{
+    width: 100%;
+    background: #8A8F82;
+    position: fixed;
+    z-index: 2;
+}
+.barra{
+    width: 100%;
+}
+.centrado{
+    justify-content: space-evenly;
+    margin-right: 120px;
+}
+.logo img {
+    width: 110px;
+    height: auto;
+    transition: all 0.2;
+}

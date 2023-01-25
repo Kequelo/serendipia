@@ -1,0 +1,79 @@
+.conteinerForm {
+    @include flex (row, space-evenly, center);
+    font-family: $typo-sec;
+    width: 100%;
+
+    a{
+        font-size: 18px;
+        text-decoration: none;
+        font-weight: 10px;
+        margin-left: 10px;
+        align-content: center;
+        color: $typo-color;
+        i{
+            color: $typo-color1;
+            margin-right: 10px;
+        }
+    }
+    form{
+        margin-top: 40px;
+        width: 50%;
+        }
+    }
+.infoForm {
+    @include flex (column,none,center);
+    color: $typo-color;
+    width: 50%;
+    margin-top: 80px;
+    margin-left: 20px;
+    height: 600px;
+    h2{
+        font-size: 50px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+    }
+    p{
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 20px 20px 40px 15px;
+    }
+}
+.conteinerForm form .campo, textarea{
+    width: 100%;
+    padding: 5px 5px;
+    font-size: 15px;
+    border: 1px solid #DC9D3E;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    outline: 0px;
+    max-width: 700px;
+    min-width: 700px;
+}
+.conteinerForm form textarea{
+    min-height: 220px;
+    max-height: 300px;
+    max-width: 700px;
+    min-width: 700px;
+}
+.conteinerForm label{
+    font-size: 12px;
+    color: $typo-color;
+    margin: 5px;
+}
+.conteinerForm .btn-enviar{
+    padding: 10px 30px;
+    margin-top: 20px;
+    margin-left: 320px;
+    font-size: 16px;
+    border: none;
+    outline: 0px;
+    background: whitesmoke ;
+    color: #DC9D3E;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 300ms;
+}
+.conteinerForm .btn-enviar:hover{
+    transform: scale(1.2);
+}

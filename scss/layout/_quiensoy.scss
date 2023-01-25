@@ -1,0 +1,44 @@
+.sobreMi{
+    @include flex (row,space-evenly,center);
+    height: 600px;
+    width: 80%;
+}
+.cajaTexto{
+    @include flex (column, flex-start, center);
+    width: 600px;
+    height: 600px;
+    margin: 120px 0px 60px 60px;
+    gap: 20px;
+    color: $typo-color;
+    font-family: $typo-sec;
+}
+    h2{
+    font-size: 45px;
+    padding: 0 1rem;
+    font-style: none;
+    p{
+    font-size: 15px;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    gap: 1px;
+    }
+}
+.cajaImagen {
+    display: flex;
+    background-color: violet;
+    width: 250px;
+    img{
+        width: 500px;
+    }
+}
+.miTaller{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin: 50px;
+}
+    img{
+    width: 450px;
+}

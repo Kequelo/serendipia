@@ -1,0 +1,75 @@
+.galeria{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    /* width: 100%; */
+    margin: auto;
+    gap: 40px;
+    padding: 15px;
+    overflow: hidden;
+    img{
+        width: 100%;
+        vertical-align: top;
+        height: 310px;
+        object-fit: cover;
+        transition: transform 1.5s;
+    }
+    a{
+        display: block;
+        position:relative;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        &:hover{
+            img{
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+.lightBox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transform: scale(0);
+    transition: transform .3s ease-in-out;
+}
+.lightBox:target{
+    transform: scale(1);
+}
+.close{
+    display: block;
+    position: absolute;
+    top: 50px;
+    right: 300px;
+    background: #DC9D3E;
+    color: whitesmoke;
+    text-decoration: none;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+.next{
+    display: block;
+    background-color: #DC9D3E;
+    color: whitesmoke;
+    height: 40px;
+    width: 60px;
+    line-height: 50px;
+    text-decoration: none;
+    text-align: center;
+    margin: 20px;
+    border-radius: 5px;
+    i{
+        font-size: 30px;
+    }
+}

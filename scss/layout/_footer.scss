@@ -1,0 +1,37 @@
+footer{
+    width: 100%;
+    height: auto;
+    @include flex (row, none, none);
+    background-color: $bg-main;
+}
+.contenedor{
+    @include flex (column, none,center);
+    width: 100%;
+}
+.tituloSeccion{
+    color: $typo-color1;
+    margin-top: 20px;
+    font-size: 25px;
+}
+.copy{
+    text-align: center;
+    font-size: small;
+    color: $typo-color;
+}
+.redes{
+    font-size: 30px;
+    color: $typo-color;
+    margin-bottom: 20px;
+    border-style: groove;
+    border-radius: 10%;
+    padding: 10px;
+    margin: 5px;
+    i{
+        &:hover{
+            transform: scale(1.2);
+            color: #DC9D3E;
+        }
+    }
+}
+
+

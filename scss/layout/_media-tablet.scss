@@ -1,0 +1,22 @@
+@media (max-width:768px) {
+    .fondoPrincipal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+    }
+    .texto{
+        width: 80%;
+        margin-right: 0px;
+        padding: 0px;
+        margin-top: -20px;
+        }
+    .texto p{
+        text-align: center;
+        font-weight: bold;
+        color: whitesmoke;
+    }
+    .imagen{
+        margin-left: 10px;
+    }
+}
