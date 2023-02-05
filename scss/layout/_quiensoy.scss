@@ -1,7 +1,7 @@
 .sobreMi{
-    @include flex (row,space-evenly,center);
-    height: 600px;
-    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    grid-gap: 10px;
 }
 .cajaTexto{
     @include flex (column, flex-start, center);
@@ -25,12 +25,13 @@
     }
 }
 .cajaImagen {
+    padding: 20px;
     display: flex;
-    background-color: violet;
-    width: 250px;
     img{
-        width: 500px;
+        width: 600px;
+        height: 600px;
     }
+
 }
 .miTaller{
     display: flex;
@@ -38,7 +39,4 @@
     align-items: flex-start;
     justify-content: space-around;
     margin: 50px;
-}
-    img{
-    width: 450px;
 }

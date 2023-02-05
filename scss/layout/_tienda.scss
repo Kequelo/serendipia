@@ -1,16 +1,33 @@
+.titulo {
+    @include flex (row, center, start);
+    height: 80px;
+    font-family: $typo-sec;
+    font-size: 65px;
+    color: $typo-color;
+    margin-left: 30px
+}
+.subTitulo{
+    @include flex (row, center, center);
+    font-family: $typo-sec;
+    color: $typo-color;
+    font-weight: 50;
+    background-color: $bg-main;
+    margin-top: 30px;
+    font-size: 30px;
+}
 .conteiner{
-    width: 95%;
-    height: 780px;
-    @include flex (row, evenly, center);
-    margin-left: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 10px;
+
 }
 .card{
-    width: 1200px;
     height: 720px;
     border-radius: 8px;
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.800);
     border-color: black;
     border-style:ridge;
+    object-fit: cover;
     overflow: hidden;
     text-align: center;
     transition: all 0.25s;

@@ -17,7 +17,8 @@
     }
     form{
         margin-top: 40px;
-        width: 50%;
+        margin-right: 220px;
+        width: 32%;
         }
     }
 .infoForm {
@@ -57,10 +58,10 @@
     min-width: 700px;
 }
 .conteinerForm label{
-    font-size: 12px;
+    font-size: 10px;
     color: $typo-color;
-    margin: 5px;
 }
+
 .conteinerForm .btn-enviar{
     padding: 10px 30px;
     margin-top: 20px;

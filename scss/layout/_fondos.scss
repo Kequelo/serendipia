@@ -1,21 +1,20 @@
 .fondoPrincipal{
     @include flex (row,space-between,none);
     flex-wrap: wrap;
-    background-image: url("../assets/image/fondo1.png");
-    background-attachment: fixed;
     width: 100%;
+    background-image: url("../assets/image/fondo1.png");
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-attachment: fixed;
     letter-spacing: 0.02;
-    padding: 155px 0px;
+    padding: 180px 0px;
     font-family: $typo-sec;
 }
 .texto{
     width: 23%;
-    margin-right: 20px;
-    margin-top: 200px;
 }
+
 .fondoContacto {
     background-image: url("../assets/image/fondoContacto.png");
     background-attachment: fixed;

@@ -14,20 +14,18 @@ font-family: 'Mitr', sans-serif;
   justify-content: space-between;
   align-items: none;
   flex-wrap: wrap;
-  background-image: url("../assets/image/fondo1.png");
-  background-attachment: fixed;
   width: 100%;
+  background-image: url("../assets/image/fondo1.png");
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-attachment: fixed;
   letter-spacing: 0.02;
-  padding: 155px 0px;
+  padding: 180px 0px;
   font-family: "Mitr", sans-serif; }
 
 .texto {
-  width: 23%;
-  margin-right: 20px;
-  margin-top: 200px; }
+  width: 23%; }
 
 .fondoContacto {
   background-image: url("../assets/image/fondoContacto.png");
@@ -70,6 +68,29 @@ font-family: 'Mitr', sans-serif;
   background-size: cover;
   padding-top: 30px; }
 
+.banner h1, .banner h2 {
+  font-family: "Cookie", cursive;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: start;
+  color: whitesmoke;
+  margin: 5px 50px;
+  padding: 0;
+  font-size: 96px; }
+
+.banner h2 {
+  font-size: 30px; }
+
+.texto {
+  margin-right: 80px;
+  margin-top: 200px;
+  color: whitesmoke; }
+
+.nav-link {
+  color: whitesmoke;
+  font-size: 20px; }
+
 .titulo {
   display: flex;
   flex-direction: row;
@@ -78,7 +99,8 @@ font-family: 'Mitr', sans-serif;
   height: 80px;
   font-family: "Mitr", sans-serif;
   font-size: 65px;
-  color: whitesmoke; }
+  color: whitesmoke;
+  margin-left: 30px; }
 
 .subTitulo {
   display: flex;
@@ -92,36 +114,18 @@ font-family: 'Mitr', sans-serif;
   margin-top: 30px;
   font-size: 30px; }
 
-.banner h1, .banner h2 {
-  font-family: "Cookie", cursive;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: start;
-  color: #DC9D3E;
-  margin: 5px 10px;
-  padding: 0;
-  font-size: 96px; }
-
-.banner h2 {
-  font-size: 30px; }
-
 .conteiner {
-  width: 95%;
-  height: 780px;
-  display: flex;
-  flex-direction: row;
-  justify-content: evenly;
-  align-items: center;
-  margin-left: 50px; }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 10px; }
 
 .card {
-  width: 1200px;
   height: 720px;
   border-radius: 8px;
   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.8);
   border-color: black;
   border-style: ridge;
+  object-fit: cover;
   overflow: hidden;
   text-align: center;
   transition: all 0.25s;
@@ -168,7 +172,8 @@ font-family: 'Mitr', sans-serif;
       margin-right: 10px; }
   .conteinerForm form {
     margin-top: 40px;
-    width: 50%; }
+    margin-right: 220px;
+    width: 32%; }
 
 .infoForm {
   display: flex;
@@ -208,9 +213,8 @@ font-family: 'Mitr', sans-serif;
   min-width: 700px; }
 
 .conteinerForm label {
-  font-size: 12px;
-  color: whitesmoke;
-  margin: 5px; }
+  font-size: 10px;
+  color: whitesmoke; }
 
 .conteinerForm .btn-enviar {
   padding: 10px 30px;
@@ -229,12 +233,9 @@ font-family: 'Mitr', sans-serif;
   transform: scale(1.2); }
 
 .sobreMi {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 600px;
-  width: 80%; }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  grid-gap: 10px; }
 
 .cajaTexto {
   display: flex;
@@ -260,11 +261,11 @@ h2 {
     gap: 1px; }
 
 .cajaImagen {
-  display: flex;
-  background-color: violet;
-  width: 250px; }
+  padding: 20px;
+  display: flex; }
   .cajaImagen img {
-    width: 500px; }
+    width: 600px;
+    height: 600px; }
 
 .miTaller {
   display: flex;
@@ -273,12 +274,9 @@ h2 {
   justify-content: space-around;
   margin: 50px; }
 
-img {
-  width: 450px; }
-
 .galeria {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   /* width: 100%; */
   margin: auto;
   gap: 40px;
@@ -400,3 +398,310 @@ footer {
   .redes i:hover {
     transform: scale(1.2);
     color: #DC9D3E; }
+
+@media (max-width: 768px) {
+  .fondoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  .texto {
+    margin-top: 20px;
+    padding: 20px;
+    color: whitesmoke; }
+    .texto p {
+      font-size: 18px;
+      line-height: 1.5;
+      font-weight: normal; }
+  .titulo {
+    font-size: 35px;
+    align-items: center; }
+  .lightBox {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform .3s ease-in-out; }
+    .lightBox img {
+      width: 85%; }
+  .lightBox:target {
+    transform: scale(0.9); }
+  .fondoSobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .sobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; }
+  .miTaller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .cajaTexto {
+    margin-right: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto; }
+    .cajaTexto h2 {
+      font-size: 40px;
+      align-items: center; }
+    .cajaTexto p {
+      font-size: 12px;
+      line-height: 1.5; }
+  .cajaImagen {
+    margin-bottom: 20px;
+    justify-content: space-around; }
+  .fondoContacto {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto; }
+  .conteinerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px; }
+    .conteinerForm a {
+      font-size: 15px;
+      text-decoration: none;
+      color: whitesmoke; }
+      .conteinerForm a i {
+        color: #DC9D3E; }
+    .conteinerForm form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+      justify-content: center; }
+    .conteinerForm .infoForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: whitesmoke; }
+      .conteinerForm .infoForm h2 {
+        font-size: 70px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none; }
+      .conteinerForm .infoForm p {
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        line-height: 1.6; }
+  .conteinerForm form .campo {
+    font-size: 15px;
+    border: 1px solid #DC9D3E;
+    margin-bottom: 20px;
+    margin-left: 100px;
+    border-radius: 3px;
+    outline: 0px;
+    max-width: 400px;
+    min-width: 400px; }
+  .conteinerForm form textarea {
+    margin-left: 100px;
+    min-height: 220px;
+    max-height: 200px;
+    max-width: 400px;
+    min-width: 400px; }
+  .conteinerForm form label {
+    margin-left: 230px;
+    font-size: 10px;
+    color: whitesmoke; }
+  .conteinerForm .btn-enviar {
+    margin-left: 250px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    height: 50px;
+    width: 100px; }
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items: center; }
+  .contenedor {
+    gap: 0;
+    margin: 0;
+    justify-items: center;
+    width: 80%; }
+  .imagen {
+    margin-top: 5px; } }
+
+@media (max-width: 320px) {
+  .fondoPrincipal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%; }
+  .texto {
+    font-size: 12px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-left: 9px;
+    width: 300px;
+    height: 350px;
+    overflow: auto;
+    word-wrap: break-word;
+    color: whitesmoke;
+    text-align: justify; }
+    .texto p {
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: normal; }
+  .banner {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin-right: 40px; }
+    .banner h1, .banner h2 {
+      font-size: 60px; }
+    .banner h2 {
+      font-size: 30px; }
+  .titulo {
+    font-size: 35px;
+    align-items: center; }
+  .lightBox {
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+    transition: transform .3s ease-in-out; }
+    .lightBox img {
+      width: 85%; }
+  .lightBox:target {
+    transform: scale(0.9); }
+  .fondoSobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .sobreMi {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px; }
+  .miTaller {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+  .cajaTexto {
+    margin-right: 30px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: auto; }
+    .cajaTexto h2 {
+      font-size: 30px;
+      align-items: center; }
+    .cajaTexto p {
+      font-size: 12px;
+      line-height: 1.5; }
+  .cajaImagen {
+    margin-bottom: 20px;
+    justify-content: space-around; }
+    .cajaImagen img {
+      width: 220px;
+      height: 220px; }
+  .fondoContacto {
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: auto; }
+  .conteinerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 10px; }
+    .conteinerForm .infoForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: whitesmoke;
+      margin-top: -45px; }
+      .conteinerForm .infoForm h2 {
+        font-size: 42px;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none; }
+      .conteinerForm .infoForm p {
+        font-size: 14px;
+        align-items: center;
+        justify-content: center;
+        width: 250px;
+        line-height: 1.6; }
+      .conteinerForm .infoForm a {
+        width: 280px;
+        font-size: 14px;
+        text-decoration: none;
+        color: whitesmoke; }
+        .conteinerForm .infoForm a i {
+          color: #DC9D3E; }
+  form {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    justify-content: center; }
+  .conteinerForm form .campo {
+    font-size: 15px;
+    border: 1px solid #DC9D3E;
+    margin-bottom: 20px;
+    margin-left: 200px;
+    border-radius: 3px;
+    outline: 0px;
+    max-width: 200px;
+    min-width: 200px; }
+  .conteinerForm form textarea {
+    margin-left: 200px;
+    min-height: 120px;
+    max-height: 100px;
+    max-width: 200px;
+    min-width: 200px; }
+  .conteinerForm form label {
+    margin-left: 230px;
+    font-size: 12px;
+    color: whitesmoke; }
+  .conteinerForm .btn-enviar {
+    margin-left: 250px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    height: 50px;
+    width: 100px; }
+  footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0;
+    align-items: center; }
+  .contenedor {
+    gap: 0;
+    margin: 0;
+    justify-items: center;
+    width: 80%; }
+  .imagen {
+    margin-top: 5px; } }

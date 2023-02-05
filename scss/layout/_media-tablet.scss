@@ -2,21 +2,158 @@
     .fondoPrincipal{
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
-        align-content: center;
+        width: 100%;
     }
     .texto{
-        width: 80%;
-        margin-right: 0px;
-        padding: 0px;
-        margin-top: -20px;
+        margin-top: 20px;
+        padding: 20px;
+        color: $typo-color;
+        p{
+            font-size: 18px;
+            line-height: 1.5;
+            font-weight: normal;
         }
-    .texto p{
-        text-align: center;
-        font-weight: bold;
-        color: whitesmoke;
     }
-    .imagen{
-        margin-left: 10px;
+    .titulo{
+        font-size: 35px;
+        align-items: center;
+    }
+    .lightBox{
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: scale(0);
+        transition: transform .3s ease-in-out;
+        img{
+            width: 85%;
+        }
+    }
+    .lightBox:target{
+        transform: scale(.9);
+    }
+    .fondoSobreMi{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobreMi{
+        @include flex (column, center, center);
+        padding: 30px;
+    }
+    .miTaller{
+        @include flex (column, center, center)
+    }
+    .cajaTexto{
+        margin-right: 30px;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: auto;
+        h2{
+            font-size: 40px;
+            align-items: center;
+        }
+        p{
+            font-size: 12px;
+            line-height: 1.5;
+        }
+    }
+    .cajaImagen{
+        margin-bottom: 20px;
+        justify-content: space-around;
+    }
+    .fondoContacto{
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: auto
+    }
+    .conteinerForm {
+        @include flex (column, center, center);
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 10px;
+        a{
+            font-size: 15px;
+            text-decoration: none;
+            color: $typo-color;
+            i{
+                color: $typo-color1;
+            }
+        }
+                form{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+            justify-content: center;
+        }
+        .infoForm {
+            @include flex (column,flex-start,center);
+            color: $typo-color;
+            h2{
+                font-size: 70px;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+            }
+            p{
+                font-size: 14px;
+                align-items: center;
+                justify-content: center;
+                width: 250px;
+                line-height: 1.6;
+            }
+        }
+
+
+        }
+        .conteinerForm form .campo{
+            font-size: 15px;
+            border: 1px solid #DC9D3E;
+            margin-bottom: 20px;
+            margin-left: 100px   ;
+            border-radius: 3px;
+            outline: 0px;
+            max-width: 400px;
+            min-width: 400px;
+        }
+        .conteinerForm form textarea{
+            margin-left: 100px   ;
+            min-height: 220px;
+            max-height: 200px;
+            max-width: 400px;
+            min-width: 400px;
+        }
+        .conteinerForm form label{
+            margin-left: 230px   ;
+            font-size: 10px;
+            color: $typo-color;
+        }
+        .conteinerForm .btn-enviar{
+            margin-left: 250px;
+            margin-bottom: 20px;
+            @include flex (row, center, center);
+            font-size: 13px;
+            height: 50px;
+            width: 100px;
+        }
+    footer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        align-items: center;
+    }
+    .contenedor{
+        gap: 0;
+        margin: 0;
+        justify-items: center;
+        width: 80%;
+    }
+    .imagen {
+        margin-top: 5px;
     }
 }
